@@ -1,0 +1,47 @@
+﻿@model IEnumerable<prjonlineorder.Models.TableB3>
+
+@{
+    ViewData["Title"] = "DetailsC";
+}
+
+<h1><b>三號桌</b></h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TMeal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TNum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TPrice)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model)
+{
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TMeal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TPrice)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<br><br><br><br>
+<div class="text-right">
+    <a asp-action="DeleteC">
+        <input id="a" type="button" value="結帳" style="width: 90px; height: 45px; font-size: 20px; background-color: #874141; color: #ffffff; border-radius: 10px; border: none " />
+    </a>
+</div>

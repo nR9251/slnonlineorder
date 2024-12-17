@@ -1,0 +1,46 @@
+﻿@model prjonlineorder.Models.TableB3
+
+@{
+    ViewData["Title"] = "更改數量";
+}
+
+<h1>更改數量</h1><br>
+<a asp-action="customerC">
+    <input id="R" type="button" value="回選單" style="width: 50px; height: 25px; font-size: 10px; border-radius: 10px; border: none; color: #404040 " />
+</a>
+<br><br>
+
+<h4>桌號：<b>3</b></h4>
+<hr />
+<br>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditC">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="TNumber" />
+            <div class="form-group">
+                @Html.DisplayFor(model => model.TMeal)
+                <input type="hidden" asp-for="TMeal" class="form-control" />
+                <span asp-validation-for="TMeal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TNum" class="control-label"></label>
+                <input asp-for="TNum" class="form-control" />
+                <span asp-validation-for="TNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="hidden" asp-for="TPrice" class="form-control" />
+                <span asp-validation-for="TPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" style="background-color: #bcd4cf; border-radius: 10px; border: none; color: #000000" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+
+</div>
+

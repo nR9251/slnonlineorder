@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prjonlineorder", "prjonlineorder\prjonlineorder.csproj", "{4513609C-A128-47D8-8BDF-87E7E1FA65BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4513609C-A128-47D8-8BDF-87E7E1FA65BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4513609C-A128-47D8-8BDF-87E7E1FA65BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4513609C-A128-47D8-8BDF-87E7E1FA65BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4513609C-A128-47D8-8BDF-87E7E1FA65BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EFBBBF73-1F7A-488B-9307-AF5252D7DDA6}
+	EndGlobalSection
+EndGlobal

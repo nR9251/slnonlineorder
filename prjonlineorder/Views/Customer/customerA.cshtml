@@ -1,0 +1,63 @@
+﻿@model IEnumerable<prjonlineorder.Models.TableB1>
+
+@{
+    ViewData["Title"] = "customerA";
+}
+
+<h1>桌號：<b>1</b></h1>
+<br>
+<a asp-Controller="Home" asp-action="Index">
+    <input id="R" type="button" value="回首頁" style="width: 60px; height: 30px; font-size: 15px; background-color: #bcd4cf; border-radius: 10px; border: none " />
+</a><br><br>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TMeal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TNum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TPrice)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TMeal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TNum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TPrice)
+                </td>
+                <td>
+                    <a asp-action="EditA" asp-route-id="@item.TNumber">
+                        <input id="A" type="button" value="我要點餐" style="width: 120px; height: 40px; font-size: 17px; border: none; background-color: #bcd4cf; border-radius: 7px " />
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br><br><br>
+<div class="text-right">
+    <body>
+        <script>
+            function link2nthu() {
+                answer = confirm("你確定要送出菜單？");
+                if (answer)
+                    location.href = "http://localhost:31391/Customer/Checkout";
+            }
+        </script>
+
+        <a href="javascript:link2nthu()" type="button" style="width: 90px; height: 45px; font-size: 20px; background-color: #bcd4cf; border-radius: 10px; border: none; color:#000000 ">確認送出</a>
+        <hr>
+    </body>
+</div>
